@@ -1,0 +1,138 @@
+html, body{
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 320px;
+}
+
+
+h2{
+    font-family: 'Nothing You Could Do', cursive;
+    font-weight: bold;
+    font-size: 2em;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+p#across{
+    font-family: 'Nothing You Could Do', cursive;
+    font-size: 3em;
+    position: absolute;
+    top: 20%;
+    left: 60%;
+    color: white;
+    transform: rotate(15deg);
+}
+main{
+    position:relative;
+}
+main img{
+    width:100%;
+    object-fit: cover;
+    object-position: center;
+    height: 450px;
+    vertical-align: bottom;
+}
+div#overlay{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.4)
+}
+div.component{
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,.5);
+}
+
+div.welcome-form{
+    width: 300px;
+}
+div.welcome-form form{
+    width: 90%;
+    margin: auto;
+    padding: 0;
+    text-align: center;
+}
+div.welcome-form input{
+    font-family: 'Montserrat', sans-serif;
+    margin:0;
+    margin-bottom: 20px;
+    font-size: 20px;
+    width: 98%;
+    border: none;
+    padding: 2px;
+    outline:none;
+}
+input.errorInput{
+    box-shadow: 0px 0px 1px red;
+}
+div.welcome-form p{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
+p a{
+    color: black;
+}
+p.error{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: white;
+    background-color: #bb0000;
+}
+p.invisible{
+    display:none;
+}
+button{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: white;
+    background-color: black;
+    border: none;
+    padding: 5px 10px 5px 10px;
+    outline:none;
+    cursor:pointer;
+}
+button:hover{
+    background-color: #2e2e2e;
+}
+footer{
+    text-align: center;
+    font-family: 'Nothing You Could Do', cursive;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+@media screen and (min-width:480px) and (max-width:650px){
+    div.component{
+        top:50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    p#across{
+        display:none;
+    }
+}
+@media screen and (min-width:320px) and (max-width:480px){
+    div.component{
+        width: 90%;
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    p#across{
+        display:none;
+    }
+}
+#profile img{
+    width: 100px;
+    height: 100px;
+}

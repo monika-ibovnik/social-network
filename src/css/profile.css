@@ -1,0 +1,16 @@
+div#profile{
+    text-align: center;
+}
+
+div.profile-pic{
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    margin: auto;
+
+}
+
+div.profile-pic img{
+    width: 100%;
+    height: 100%;
+}
