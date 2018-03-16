@@ -135,4 +135,12 @@ router.get('/friendstatus/reject/:id', (req,res)=>{
         });
     });
 });
+
+router.get('/friends/get', (req,res)=>{
+    let userid = req.session.user.id;
+    Query.dbGetFriends(userid).then(result=>{
+        result = [].concat.apply([], result)
+        res.json(result);
+    });
+})
 module.exports = router;

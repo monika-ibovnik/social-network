@@ -93,3 +93,16 @@ exports.dbUpdateFriendshipStatus = function(status, friendship_id){
         return data.rows;
     });
 };
+exports.dbGetFriends = function(userid){
+    let friendList1 = db.query(`SELECT heroes.* FROM friendship_status
+              LEFT JOIN heroes ON recipient_id = heroes.id
+              WHERE (sender_id = $1 and status = 2)`, [userid]).then(data=>{
+                  return data.rows;
+              });
+    let friendList2 = db.query(`SELECT heroes.* FROM friendship_status
+            LEFT JOIN heroes ON sender_id = heroes.id
+            WHERE (recipient_id = $1 and status = 2)`, [userid]).then(data=>{
+                return data.rows;
+            });
+    return Promise.all([friendList1, friendList2]);
+}
